@@ -23,13 +23,22 @@ int main()
 	LinkedList<int> listInts;
 	listInts.add(0);
 	listInts.add(1);
-	for (int i = 2; i < 20; i++)
+	for (int i = 2; i < 40; i++)
 	{
 		listInts.add(listInts[i - 2] + listInts[i - 1]);
 	}
 	listInts.print();
 
-
+	
+	// Beispiel Loop (effiziente Vatiante)
+	int sum = 0;
+	for (node<int>* tmp = listInts.first; tmp != nullptr; tmp = tmp->next)
+	{
+		sum += tmp->data;
+	}
+	float goldenRatio = static_cast<float>(sum) / static_cast<float>(sum - listInts.last->data);
+	std::cout << "Golden ratio = " << goldenRatio << std::endl;
+	
 
 
 	return 0;
