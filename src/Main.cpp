@@ -4,7 +4,6 @@
 
 int main()
 {
-	
 	LinkedList<std::string> list;
 	list.add("Objekt_0");
 	list.add("Objekt_1");
@@ -28,7 +27,6 @@ int main()
 		listInts.add(listInts[i - 2] + listInts[i - 1]);
 	}
 	listInts.print();
-
 	
 	// Beispiel Loop (effiziente Vatiante)
 	int sum = 0;
@@ -38,8 +36,6 @@ int main()
 	}
 	float goldenRatio = static_cast<float>(sum) / static_cast<float>(sum - listInts.last->data);
 	std::cout << "Golden ratio = " << goldenRatio << std::endl;
-	
-
 
 	return 0;
 }
