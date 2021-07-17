@@ -26,15 +26,18 @@ int main()
 	{
 		listInts.add(listInts[i - 2] + listInts[i - 1]);
 	}
-	listInts.print();
 	
-	// Beispiel Loop (effiziente Vatiante)
 	int sum = 0;
+	// Beispiel Loop (effiziente Vatiante)
 	for (node<int>* tmp = listInts.first; tmp != nullptr; tmp = tmp->next)
 	{
 		sum += tmp->data;
 	}
 	float goldenRatio = static_cast<float>(sum) / static_cast<float>(sum - listInts.last->data);
+
+	listInts.remove(20, 20);
+	listInts.print();
+
 	std::cout << "Golden ratio = " << goldenRatio << std::endl;
 
 	return 0;
