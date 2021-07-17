@@ -29,11 +29,7 @@ int main()
 	}
 	listInts.print();
 
-	while (true)
-	{
-		listInts.insert(6, 1);
-		listInts.remove(6);
-	}
+
 
 
 	return 0;
