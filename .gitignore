@@ -1,3 +1,9 @@
 
+*.idb
 *.db
+*.exe
+*.recipe
 *.tlog
+*.obj
+*.idb
+*.pdb
