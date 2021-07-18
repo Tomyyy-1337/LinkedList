@@ -147,7 +147,5 @@ public:
 			std::cout << "Index: " << indx++ << ", Data: " << tempPtr->data << std::endl;
 		}
 		std::cout << "Die Liste hat " << size << " ELemente." << std::endl;
-
-		// hai
 	}
 };
