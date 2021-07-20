@@ -8,6 +8,8 @@ struct node
 	T data;
 };
 
+//TODO Reverse, Transfer Node from other list
+
 template<class T>
 class LinkedList
 {
@@ -27,6 +29,33 @@ public:
 	void replace(int indx, T data)
 	{
 		getNode(indx)->data = data;
+	}
+
+	void reverse()
+	{
+		if (size <= 1) return;
+
+		this->last = first;
+		
+		node<T>* last;
+		node<T>* current;
+		node<T>* next;
+
+
+		last = first;
+		current = first;
+		next = current->next;
+		
+		current->next = nullptr;
+
+		while (next != nullptr) {
+			current = next;
+			next = current->next;
+			current->next = last; 
+			last = current;
+		}
+		first = current;
+
 	}
 
 	void add(T data)
