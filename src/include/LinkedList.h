@@ -8,8 +8,6 @@ struct node
 	T data;
 };
 
-//TODO Reverse, Transfer Node from other list
-
 template<class T>
 class LinkedList
 {
@@ -55,7 +53,6 @@ public:
 			last = current;
 		}
 		first = current;
-
 	}
 
 	void add(T data)
