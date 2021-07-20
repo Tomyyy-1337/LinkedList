@@ -35,7 +35,9 @@ int main()
 	}
 	float goldenRatio = static_cast<float>(sum) / static_cast<float>(sum - listInts.last->data);
 
-	listInts.remove(20, 20);
+	listInts.remove(10, 30);
+	listInts.print();
+	listInts.reverse();
 	listInts.print();
 
 	std::cout << "Golden ratio = " << goldenRatio << std::endl;

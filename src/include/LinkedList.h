@@ -39,7 +39,6 @@ public:
 		node<T>* current;
 		node<T>* next;
 
-
 		last = first;
 		current = first;
 		next = current->next;
