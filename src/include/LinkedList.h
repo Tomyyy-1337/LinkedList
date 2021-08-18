@@ -24,6 +24,15 @@ public:
 		last = nullptr;
 	}
 
+	bool contains(T data)
+	{
+		for (node<T>* current = first; current != nullptr; current = current->next)
+		{
+			if (current->data == data) return true;
+		}
+		return false;
+	}
+
 	void replace(int indx, T data)
 	{
 		getNode(indx)->data = data;
@@ -150,7 +159,6 @@ public:
 		if (index == size) {
 			last = newNode;
 		}
-
 		size++;
 	}
 
